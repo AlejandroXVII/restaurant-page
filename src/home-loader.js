@@ -3,6 +3,7 @@ import ramenSRC from './ramen.png';
 const homeLoader= () =>{
     const $content = document.querySelector('#content-main-container');
 
+    const principalContainer = document.createElement('div');
     const contentContainer = document.createElement('div');
     const welcomeTittle = document.createElement('h2');
     const welcomeSubTittle = document.createElement('h3');
@@ -18,8 +19,10 @@ const homeLoader= () =>{
 
     contentContainer.classList.add('home-container');
     orderNowButton.classList.add('action-call-button');
+    principalContainer.classList.add('grid-container');
 
-    $content.appendChild(contentContainer);
+    $content.appendChild(principalContainer);
+    principalContainer.appendChild(contentContainer);
     contentContainer.appendChild(welcomeTittle);
     contentContainer.appendChild(welcomeSubTittle);
     contentContainer.appendChild(ramenPNG);
